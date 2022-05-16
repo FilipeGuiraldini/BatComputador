@@ -1,6 +1,7 @@
 
 body {
     margin: 0;
+    font-family: Roboto;
 }
 /* Menu inicio */
 .logo {
@@ -9,15 +10,15 @@ body {
     width: 70%;
 }
 .logo img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin-left: 40px;
 }
 .menu {
  display: flex;
  flex-direction: row;
  justify-content: right;
- height: 100px;
+ height: 120px;
  background-color: black;
  border-bottom: solid lightgray 3px;
  font-family: 'Roboto', sans-serif;
@@ -121,5 +122,19 @@ body {
     margin-top: 10%;
     font-family: 'Roboto';
 }
+.direita2 {
+    display: flex;
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    width: 20%;
+    height: 60%;
+    flex-direction: column;
+}
+.direita2 span {
+    margin-top: 10%;
+    font-family: 'Roboto';
+}
+
 /* footer fim */
 

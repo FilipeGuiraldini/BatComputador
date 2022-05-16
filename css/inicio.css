@@ -138,3 +138,19 @@ body {
 
 /* footer fim */
 
+/* PÁGINA DE CONCEITOS COMEÇO */
+ .conceitos {
+     display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+ }
+.falacao {
+    width: 75%;
+    height: 100vh;
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+/* PÁGINA DE CONCEITOS FIM */

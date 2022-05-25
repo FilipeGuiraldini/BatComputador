@@ -3,6 +3,7 @@ body {
 }
 a {
     text-decoration: none;
+    color: black;
 }
 .local {
     display: flex;
@@ -17,20 +18,103 @@ a {
     border-top-right-radius: 10%;
     background-color: rgba(105, 174, 238,.5);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 .batmanlogo {
     width: 150px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.latnoticias {
+    display: flex;
+    border-top :solid rgba(20, 139, 250,.6) 3px;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(105, 174, 238,.2);
+}
+.latnoticias1 {
+    display: flex;
+    border-top :solid rgba(20, 139, 250,.6) 3px;
+    border-bottom :solid rgba(20, 139, 250,.6) 3px;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(105, 174, 238,.2);
+}
+.painoticias {
+    width: 100%;
+    height: 80%;
+}
+.painoticias :hover {
+    background-color:rgba(17, 140, 255, 0.1);
+    cursor: pointer;
+}
+#aqui {
+    background-color:rgba(17, 140, 255, 0.1);
+    color: white;
 }
 /* Barra lateral fim */
 
 /* relógio começo */
+.ajuste {
+    display: flex;
+    width: 80%;
+}
 .centro {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+.pai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    justify-content: center;
+}
+.filho {
+    width: 80%;
+    height: 90%;
+    background-color: rgba(105, 174, 238,.6);
+    border-right: solid rgba(20, 139, 250,.9) 4px;
+    border-left: solid rgba(20, 139, 250,.9) 4px;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.tnoticias {
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: 30px ;
+}
+.noticias {
+    width: 100%;
+    height: 20%;
+    border-top: solid rgba(20, 139, 250,.9) 2px;
+    border-bottom: solid rgba(20, 139, 250,.9) 2px;
+    background-color: rgba(105, 174, 238,.3);
+    font-weight: 900;
+}
+.noticias h3{
+    margin-left: 20px ;
+}
+.noticias p{
+    margin-left: 20px;
+    font-size: 14px;
 }
 .menu {
     border-right: solid rgba(20, 139, 250,.6) 4px;
@@ -38,12 +122,11 @@ a {
     border-bottom-right-radius: 20%;
     border-bottom-left-radius: 20%;
     width: 40%;
-    height: 100px;
+    height: 15vh;
     background-color: rgba(105, 174, 238,.4);
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 26.3%;    
+    justify-content: center;   
 }
 
 #clock {
@@ -67,25 +150,4 @@ a {
     position: absolute;
 }
 
-.teste {
-    
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    background-color: rgba(105, 174, 238,.4);
-    border-right: solid rgba(20, 139, 250,.6) 4px;
-    border-left: solid rgba(20, 139, 250,.6) 4px;
-    z-index: 100;
-    margin-left: 31.4%;
-    margin-top:15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8%;
-}
-.texto {
-    color: rgb(20, 139, 250);
-    font-family: Roboto;
-    font-size: 24px;
-}
 /* conteudo fim */

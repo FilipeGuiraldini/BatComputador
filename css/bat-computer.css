@@ -151,3 +151,81 @@ a {
 }
 
 /* conteudo fim */
+
+/* vilões inicio */
+.centro2 {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+.pai2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+
+}
+.filho2 {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(105, 174, 238,.6);
+    border-right: solid rgba(20, 139, 250,.9) 4px;
+    border-left: solid rgba(20, 139, 250,.9) 4px;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    backdrop-filter: blur(2px);
+}
+.neto {
+    width: 100%;
+    height: 95%;
+}
+.teto {
+    display: flex;
+    width: 100%;
+    height: 30%;
+}
+.apelido img {
+    width: 200px;
+    height: 90%;
+    border-radius: 40%;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-right: solid rgba(20, 139, 250,.9) 3px;
+    border-left: solid rgba(20, 139, 250,.9) 3px;
+}
+.apelido {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.depois {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cima {
+    font-size: 20px;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+}
+.baixo {
+    width: 100%;
+    height: 50%;
+}
+/* vilões final */

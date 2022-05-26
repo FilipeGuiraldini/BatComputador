@@ -68,14 +68,12 @@
                 </div>
                 <div class="battraje">Qual o seu Bat-Traje Favorito?</div>
                 <div class="escolha">
-                    <form id="ipt_bat">
-                        <input type="radio" id="pattinson" name="batsuit" value="PATTINSON">
-                        <label for="pattinson">Bat-Pattinson</label><br>
-                        <input type="radio" id="affleck" name="batsuit" value="AFFLECK">
-                        <label for="affleck">Bat-Affleck</label><br>
-                        <input type="radio" id="bale" name="batsuit" value="BALE">
-                        <label for="bale">Bat-Bale</label>
-                      </form>
+                    <select id="ipt_bat">
+                        <option value=0>-Selecione o traje-</option>
+                        <option value="pattinson">Bat-Pattinson</option>
+                        <option value="affleck">Bat-Affleck</option>
+                        <option value="bale">Bat-Bale</option>
+                    </select>
                 </div>
                 <div onclick="enviar()" class="botao2"><button>Registrar</button></div>
 
@@ -119,29 +117,36 @@ function enviar() {
     var email = ipt_email.value;
     var nome = ipt_nome.value;
     var senha = ipt_senha.value;
-    var csenha = ipt_csenha.value
+    var csenha = ipt_csenha.value;
     var bat = ipt_bat.value;
+   
     passou = true;
      if (email.indexOf("@") == -1) {
         alert ("Insira algo no campo de email ou um email valido");
         passou = false;
     }
-    if (nome == "") {
+    else if (nome == "") {
         alert("Insira seu nome no campo de nome");
         passou = false;
     }
-    if (senha == "") {
+   else if (senha == "") {
         alert("Insira sua senha no campo de senha");
+        passou = false;
     }
-    if (csenha == ""){
+   else if (csenha == ""){
         alert("Confirme a senha no campo da senha");
+        passou = false;
     }
-    if (csenha != senha) {
+   else if (csenha != senha) {
         alert("Senhas diferentes");
         passou = false;
     }
-    if (senha.length < 4) {
+   else if (senha.length < 4) {
         alert ("Senha muito curta! senha tem de ter acima de 3 caracteres");
+        passou = false;
+    }
+    else if (bat == "" || bat == 0) {
+        alert ("Selecione o Bat-traje preferido!");
         passou = false;
     }
     if (passou == true) {
@@ -150,3 +155,15 @@ function enviar() {
 }
 
 </script>
+<!--
+
+ <form id="ipt_bat">
+                        <input type="radio" id="pattinson" name="batsuit" value="PATTINSON">
+                        <label for="pattinson">Bat-Pattinson</label><br>
+                        <input type="radio" id="affleck" name="batsuit" value="AFFLECK">
+                        <label for="affleck">Bat-Affleck</label><br>
+                        <input type="radio" id="bale" name="batsuit" value="BALE">
+                        <label for="bale">Bat-Bale</label>
+                      </form>
+
+-->

@@ -185,18 +185,26 @@ a {
 }
 .neto {
     width: 100%;
-    height: 95%;
+    height: 90%;
 }
 .teto {
     display: flex;
     width: 100%;
     height: 30%;
+    
+}
+.parede {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 .apelido img {
     width: 200px;
-    height: 90%;
+    height: 80%;
     border-radius: 40%;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-left: 10px;
     border-right: solid rgba(20, 139, 250,.9) 3px;
     border-left: solid rgba(20, 139, 250,.9) 3px;
@@ -208,7 +216,7 @@ a {
     width: 30%;
     align-items: center;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 17px;
     font-family: Roboto;
 }
 .depois {
@@ -222,10 +230,52 @@ a {
     display: flex;
     width: 100%;
     height: 50%;
-    align-items: center;
+    align-items: flex-end;
 }
 .baixo {
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    
     width: 100%;
     height: 50%;
 }
+.solto {
+    color: red;
+    font-weight: 900;
+}
+.preso {
+    color: yellow;
+    font-weight: 900;
+}
+.cont{
+    width: 94%;
+    height: 100%;
+}
+.paragrafo {
+    font-size:18px ;
+    font-family: Roboto;
+}
+/* vilões botoes */
+
+.botoes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.stylebutton {
+    border:solid rgba(20, 139, 250,.9) 3px;
+    background-color: rgba(105, 174, 238,.2);
+    border-radius: 20%;
+    color: white;
+    height: 40px;
+    width: 70px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* vilões botoes */
 /* vilões final */
+

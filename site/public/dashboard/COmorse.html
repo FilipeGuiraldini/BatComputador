@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador Morse</title>
+  <link rel="stylesheet" href="morse.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="conteudo">
+   <div class="menuCentro">
+    <div class="menu">
+        <div class="logo">
+            <img src="../assets/imgs/Batman-Logo.png">
+        </div>
+        <div class="espacamento">
+            <a href="bat-computer.html"><li>Noticias</li></a>
+            <a href="viloes.html"><li>Vilões</li></a>
+            <a href="batfamilia.html"><li>Bat-Familia</li></a>
+            <a href=""><li>Métrica</li></a>
+            <li class="aqui">Codificador </li>
+            <a href=""><li>Decodificador</li></a>
+        </div>
+    </div>
+    </div> 
+    <div class="paicodifica">
+    <div class="codifica">
+        <div class="filhocodifica">
+          <div class="paiPo"> 
+           <div class="po">
+            <h4>Bat-Codificador de Morse</h4>
+            <p class="texto">O código deve ser digitado inteiramente com letras minúsculas e sem acentuação</p>
+            <input id="ipt_codifica" class="inputC" placeholder="Insira aqui">
+            <button class="ipt_botao" onclick="enviar()">Enviar</button>
+           </div> 
+           <div class="msgCod">
+               <p class="texto">Seu codigo aqui:</p>
+               <span id="mensagem"></span>
+           </div>
+        </div> 
+        </div>
+    </div>
+    </div>     
+    </div>
+</body>
+</html>
+<script>
+    var passou = true;
+    function enviar() {
+        passou = true;
+        var tradu = ipt_codifica.value;
+        var fiel = ipt_codifica.value;
+        tradu = tradu.replaceAll("0"," ----- ").replaceAll("9"," ----. ").replaceAll("8"," ---.. ").replaceAll("7"," --... ").replaceAll("6"," -.... ").replaceAll("5"," ..... ").replaceAll("4"," ....- ").replaceAll("3"," ...-- ").replaceAll("2"," ..--- ").replaceAll("1"," .---- ").replaceAll("y"," -.-- ").replaceAll("l"," .-.. ").replaceAll("p"," .--. ").replaceAll("j"," .--- ").replaceAll("w"," .-- ").replaceAll("c"," -.-. ").replaceAll("q"," --.- ").replaceAll("k"," -.- ").replaceAll("f"," ..-. ").replaceAll("r"," .-. ").replaceAll("z"," --.. ").replaceAll("g"," --. ").replaceAll("x"," -..- ").replaceAll("b"," -... ").replaceAll("d"," -.. ").replaceAll("n"," -. ").replaceAll("v"," ...- ").replaceAll("u"," ..- ").replaceAll("a"," .- ").replaceAll("h"," .... ").replaceAll("s"," ... ").replaceAll("i"," .. ").replaceAll("w"," .-- ").replaceAll("e"," . ").replaceAll("o"," --- ").replaceAll("m"," -- ").replaceAll("t"," - ").replaceAll("   ","/");
+    
+        if (ipt_codifica.value == ""){
+   	    alert("Digite Algo no campo");
+           passou = false;
+       }
+
+       if (passou == true) {
+        mensagem.innerHTML = tradu;
+       }
+    }
+   
+</script>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="logo">
+            <img src="./assets/imgs/Waynelogo.jpeg">
+        </div>
+        <div class="espacamento">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="registro.html">Registrar-se</a></li>
+            <li class="aqui">Logar-se</li>
+        </div>
+    </div>
+
+    <div class="conteudo2">
+
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
+        <div class="quadrado">
+            <div class="miniquadrado">
+                <div class="minilogo"><img src="./assets/imgs/Waynelogo.jpeg"></div>
+                <div class="rgstr">Faça Login</div>
+                <div class="momentum">
+                    <div class="email"><span>E-mail:</span></div>
+                    <div class="ipts">
+                        <div class="iptfilha">
+                            <input id="email_input" placeholder="exemplo@email.com">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="momentum">
+                    <div class="email"><span>Senha:</span></div>
+                    <div class="ipts">
+                        <div class="iptfilha">
+                            <input id="senha_input" type="password" placeholder="*************">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botao2Login"><button onclick="entrar()">Entrar</button></div>
+
+                
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="esquerda">
+            <span>Wayne Enterprises todos os direitos reservados 2022</span>
+        </div>
+        <div class="centro">
+            <span>Suporte nossas causas 
+                <li>Orfanato</li>
+                <li>Pessoas Carentes</li>
+                <li>Asilo Arkham</li>
+                <li>Prisão BlackGate</li>
+            </span>
+        </div>
+
+        <div class="direita">
+            <span>Rua Thomas Wayne 144, Avênida Sailorim, Próximo ao estádio de Gotham</span>
+        </div>
+
+        <div class="direita2">
+            <span>Contate-nos:</span>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>GitHub</li>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+
+function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            finalizarAguardar();
+            return false;
+        }
+
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/carregamento.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

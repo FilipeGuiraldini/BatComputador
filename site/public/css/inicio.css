@@ -1,0 +1,345 @@
+
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* Menu inicio */
+.logo {
+    display: flex;
+    justify-content: left;
+    width: 70%;
+}
+.logo img{
+    width: 120px;
+    height: 120px;
+    margin-left: 40px;
+}
+.menu {
+ display: flex;
+ flex-direction: row;
+ justify-content: right;
+ height: 120px;
+ background-color: black;
+ border-bottom: solid lightgray 3px;
+ font-family: 'Roboto', sans-serif;
+}
+.espacamento {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    list-style: none;
+    align-items: center;
+    color: white;
+    margin-right: 50px;
+}
+.aqui {
+    color: grey;
+    font-weight: bold;
+}
+/* Menu fim */
+
+/* conteudo inicio */ 
+    .conteudo {
+        background-image: url(../assets/imgs/cidade.jpeg);
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        
+    }
+    .movimento{
+        display: flex;
+        justify-content: left;
+        margin-left: 5%;
+    }
+    .faixada {
+        width: 60%;
+        height: 250px;
+        margin-top: 15%;
+        color: white;
+        font-family:  'Roboto', sans-serif;
+        font-size: 30px;
+    }
+    .botao {
+        display: flex;
+        justify-content: left;
+        margin-left: 5%;
+    }
+    .botao button {
+        font-family: 'Roboto', sans-serif ;
+        background-color: lightgray;
+        font-size: 16px;
+        border: solid black 2px;
+        border-radius: 10px;
+        width: 300px;
+        height: 50px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+/* conteudo fim* /
+
+/* footer inicio */
+
+.footer {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    border-top: solid lightgray 3px;
+    display: flex;
+    flex-direction: row;
+}
+.esquerda {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: left;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 16px;
+}
+.esquerda span{
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.centro {
+    color: white;
+    margin-left: 50px;
+    display: flex;
+    width: 20%;
+    height: 100%;
+}
+.centro span {
+    margin-top: 10%;
+    font-family: 'Roboto';
+}
+.direita {
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    width: 20%;
+    height: 100%;
+}
+.direita span {
+    margin-top: 10%;
+    font-family: 'Roboto';
+}
+.direita2 {
+    display: flex;
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    width: 20%;
+    height: 60%;
+    flex-direction: column;
+}
+.direita2 span {
+    margin-top: 10%;
+    font-family: 'Roboto';
+}
+
+/* footer fim */
+
+/* PÁGINA DE CONCEITOS COMEÇO */
+ .conceitos {
+     display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+ }
+.falacao {
+    width: 75%;
+    height: 100vh;
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+/* PÁGINA DE CONCEITOS FIM */
+
+/* PÁGINA DE REGISTRO COMEÇO */
+
+.conteudo2 {
+    background-image: url(../assets/imgs/cidade.jpeg);
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.quadrado {
+    background-color: black;
+    border: solid lightgray 3px;
+    width: 40%;
+    height: 85vh;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto';
+}
+.miniquadrado {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.minilogo {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.quadrado img {
+    margin-top: 10px;
+    height: 120px;
+    width: 120px;
+}
+.rgstr {
+    height: 30px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.momentum {
+    display: flex;
+
+}
+.ipts {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    color: white;
+    font-size: 16px;
+}
+.iptfilha {
+    margin-top: 15px;
+}
+.iptfilha input{
+    border-radius: 3px;
+    border: 0;
+    height: 20px;
+    background-color: black;
+    border: solid lightgrey 1px;
+    color: white;
+}
+.email {
+    width: 35%;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+.email span{
+    margin-right: 5px;
+}
+.battraje {
+    margin-top:30px;
+    height: 20px;
+    width: 99.40%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.escolha {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    color: white;
+    font-size: 14px;
+    justify-content: center;
+}
+.escolha label {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.botao2 {
+   display: flex;
+   justify-content: center;
+} 
+.botao2 button {
+    font-family: 'Roboto', sans-serif ;
+        background-color: black;
+        font-size: 16px;
+        border: solid lightgray 2px;
+        border-radius: 10px;
+        width: 300px;
+        height: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+}
+/* PÁGINA DE REGISTRO FIM */
+
+/* PÁGINA DE LOGIN COMEÇO */
+
+.botao2Login {
+    display: flex;
+    justify-content: center;
+ } 
+ .botao2Login button {
+     font-family: 'Roboto', sans-serif ;
+         background-color: black;
+         font-size: 16px;
+         border: solid lightgray 2px;
+         border-radius: 10px;
+         width: 300px;
+         height: 50px;
+         font-weight: bold;
+         cursor: pointer;
+         color: white;
+         margin-top: 50px;
+ }
+
+/* PÁGINA DE LOGIN FIM */
+
+/* Julia´s parte */
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+
+#div_erros_login {
+    margin-top: 15px;
+  }
+  
+  .alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6005a 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+#mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+/* Julia´s parte fim */

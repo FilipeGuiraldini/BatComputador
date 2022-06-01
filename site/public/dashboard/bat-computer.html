@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bat-computer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Bat-Computer</title>
+</head>
+
+<body>
+
+
+  <div class="conteudo">
+
+    <div class="local">
+
+      <div class="barralateral">
+        <img class="batmanlogo" src="../assets/imgs/Batman-Logo.png">
+       <div class="painoticias">
+        <div id="aqui" class="latnoticias">
+          <h4>Noticias</h4>
+        </div>
+        <a href="viloes.html"><div class="latnoticias">
+          <h4>Vilões</h4>
+        </div></a>
+        <a href="batfamilia.html">
+        <div class="latnoticias">
+          <h4>Bat-Familia</h4>
+        </div>
+      </a>
+        <div class="latnoticias">
+          <h4>Métrica Bat-Traje</h4>
+        </div>
+        <div class="latnoticias">
+          <h4>Codificador Morse</h4>
+        </div>
+        <div class="latnoticias">
+          <h4>Decodificador Morse</h4>
+        </div>
+        <a href="../index.html"><div class="latnoticias1">
+          <h4>Desconectar-se</h4>
+        </div></a>
+      </div> 
+      </div>
+      
+      <div class="centro">
+      
+      <div class="ajuste">
+        <div class="menu">
+          <div id="clock"></div>
+        </div>
+      </div>
+
+        <div class="pai">
+        <div class="filho">
+          <div class="tnoticias">
+           <h4>Ultimas Noticias de Gotham</h4>
+          </div>
+          <div class="noticias">
+            <h3>NOVAS: BOMBA EXPLODE NO CENTRO DE GOTHAM 13 MORTOS E 2 FERIDOS</h3>
+            <p>Testemunhas do local dizem ter visto o Coringa por perto na hora da explosão, ele é o maior suspeito até o momento.</p>
+          </div>
+          <div class="noticias">
+            <h3>MANIFESTAÇÕES NO CENTRO</h3>
+            <p>Aproximadamente 300 pessoas se reuniram para uma passeata pacifica no centro de Gotham atrás de melhora no plano carcerário de Gotham</p>
+          </div>
+          <div class="noticias">
+            <h3>3 ANOS APÓS A CANDIDATURA DE HARVEY DENT PARA PREFEITO, NÃO HOUV...</h3>
+            <p>Os cidadãos de Gotham ficam preucupados pois não há mais pessoas para se candidatarem para prefeito após o assasinato do ultimo</p>
+          </div>
+          <div class="noticias">
+            <h3>GOTHAM TEM NOITE MAIS FRIA EM 80 ANOS</h3>
+            <p>Frio não metereológicamente registrado tem previsão para continuar pelo menos pelos proximos 2 dias</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
+<script>
+  // AQUI COMEÇA O CODIGO PARA O RELÓGIO
+  function currentTime() {
+    var date = new Date();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+    document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+    var t = setTimeout(function () { currentTime() }, 1000);
+  }
+
+  function updateTime(k) {
+    if (k < 10) {
+      return "0" + k;
+    }
+    else {
+      return k;
+    }
+  }
+
+  currentTime(); 
+</script>
+
+<!--
+
+   <div class="teste">
+    <span class="texto">Bem Vindo, Filipe.</span>
+  </div>
+
+-->

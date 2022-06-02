@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador BETA-Morse</title>
+  <link rel="stylesheet" href="morse.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="conteudoASA">
+   <div class="menuCentro">
+    <div class="menuASA">
+        <div class="logoASA">
+            <a href="COmorse.html"><img src="../assets/imgs/asa-Logo.png"></a>
+        </div>
+        <div class="espacamento">
+            <a href="bat-computer.html"><li>Noticias</li></a>
+            <a href="viloes.html"><li>Vilões</li></a>
+            <a href="batfamilia.html"><li>Bat-Familia</li></a>
+            <a href=""><li>Métrica</li></a>
+            <li class="aqui">Codificador </li>
+            <a href=""><li>Decodificador</li></a>
+        </div>
+    </div>
+    </div> 
+    <div class="paicodifica">
+    <div class="codificaASA">
+        <div class="filhocodificaASA">
+          <div class="paiPo"> 
+           <div class="po">
+            <h4>BETA - ASA-Codificador de Morse</h4>
+            <p class="texto">BETA o codigo deve ser digitado devagar para que não ocorra bugs</p>
+            <input id="ipt_codifica" class="inputCASA" placeholder="Insira aqui" onkeyup="enviar()">
+           </div> 
+           <div class="msgCod">
+               <p class="texto">Seu código sai aqui:</p>
+               <span id="mensagem"></span>
+           </div>
+        </div> 
+        </div>
+    </div>
+    </div>     
+    </div>
+</body>
+</html>
+<script>
+    var i = 0;
+    var vetor = [];
+    var teste = false;
+    function enviar(){
+        teste = true;
+        vetor.push(ipt_codifica.value.toLowerCase());
+        ipt_codifica.value = '';
+        while (teste == true) {
+            if (vetor[i] == "a"){
+                mensagem.innerHTML += ".- ";
+            } else if (vetor[i] == "b"){
+                mensagem.innerHTML += "-... ";
+            } else if (vetor[i] == "c"){
+                mensagem.innerHTML += "-.-. ";
+            } else if (vetor[i] == "d"){
+                mensagem.innerHTML += "-.. ";
+            } else if (vetor[i] == "e"){
+                mensagem.innerHTML += ". ";
+            } else if (vetor[i] == "f"){
+                mensagem.innerHTML += "..-. ";
+            } else if (vetor[i] == "g"){
+                mensagem.innerHTML += "--. ";
+            } else if (vetor[i] == "h"){
+                mensagem.innerHTML += ".... ";
+            } else if (vetor[i] == "i"){
+                mensagem.innerHTML += ".. ";
+            } else if (vetor[i] == "j"){
+                mensagem.innerHTML += ".--- ";
+            } else if (vetor[i] == "k"){
+                mensagem.innerHTML += "-.- ";
+            } else if (vetor[i] == "l"){
+                mensagem.innerHTML += ".-.. ";
+            } else if (vetor[i] == "m"){
+                mensagem.innerHTML += "-- ";
+            } else if (vetor[i] == "n"){
+                mensagem.innerHTML += "-. ";
+            } else if (vetor[i] == "o"){
+                mensagem.innerHTML += "--- ";
+            } else if (vetor[i] == "p"){
+                mensagem.innerHTML += ".--. ";
+            } else if (vetor[i] == "q"){
+                mensagem.innerHTML += "--.- ";
+            } else if (vetor[i] == "r"){
+                mensagem.innerHTML += ".-. ";
+            } else if (vetor[i] == "s"){
+                mensagem.innerHTML += "... ";
+            } else if (vetor[i] == "t"){
+                mensagem.innerHTML += "- ";
+            } else if (vetor[i] == "u"){
+                mensagem.innerHTML += "..- ";
+            } else if (vetor[i] == "v"){
+                mensagem.innerHTML += "...- ";
+            } else if (vetor[i] == "w"){
+                mensagem.innerHTML += ".-- ";
+            } else if (vetor[i] == "x"){
+                mensagem.innerHTML += "-..- ";
+            } else if (vetor[i] == "y"){
+                mensagem.innerHTML += "-.-- ";
+            } else if (vetor[i] == "z"){
+                mensagem.innerHTML += "--.. ";
+           } else if (vetor[i] == " "){
+               mensagem.innerHTML += "/";
+           }
+           teste = false;
+           i++;
+        }
+        
+    }
+
+</script>

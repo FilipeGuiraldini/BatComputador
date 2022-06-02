@@ -16,7 +16,7 @@
    <div class="menuCentro">
     <div class="menu">
         <div class="logo">
-            <img src="../assets/imgs/Batman-Logo.png">
+            <a href="NOVOmorse.html"><img src="../assets/imgs/Batman-Logo.png"></a>
         </div>
         <div class="espacamento">
             <a href="bat-computer.html"><li>Noticias</li></a>
@@ -34,12 +34,12 @@
           <div class="paiPo"> 
            <div class="po">
             <h4>Bat-Codificador de Morse</h4>
-            <p class="texto">O código deve ser digitado inteiramente com letras minúsculas e sem acentuação</p>
+            <p class="texto">O código deve ser digitado sem acentuação, após aparecer, copie seu código na sua area de transferência</p>
             <input id="ipt_codifica" class="inputC" placeholder="Insira aqui">
             <button class="ipt_botao" onclick="enviar()">Enviar</button>
            </div> 
            <div class="msgCod">
-               <p class="texto">Seu codigo aqui:</p>
+               <p class="texto">Seu código sai aqui:</p>
                <span id="mensagem"></span>
            </div>
         </div> 
@@ -53,7 +53,7 @@
     var passou = true;
     function enviar() {
         passou = true;
-        var tradu = ipt_codifica.value;
+        var tradu = ipt_codifica.value.toLowerCase();
         var fiel = ipt_codifica.value;
         tradu = tradu.replaceAll("0"," ----- ").replaceAll("9"," ----. ").replaceAll("8"," ---.. ").replaceAll("7"," --... ").replaceAll("6"," -.... ").replaceAll("5"," ..... ").replaceAll("4"," ....- ").replaceAll("3"," ...-- ").replaceAll("2"," ..--- ").replaceAll("1"," .---- ").replaceAll("y"," -.-- ").replaceAll("l"," .-.. ").replaceAll("p"," .--. ").replaceAll("j"," .--- ").replaceAll("w"," .-- ").replaceAll("c"," -.-. ").replaceAll("q"," --.- ").replaceAll("k"," -.- ").replaceAll("f"," ..-. ").replaceAll("r"," .-. ").replaceAll("z"," --.. ").replaceAll("g"," --. ").replaceAll("x"," -..- ").replaceAll("b"," -... ").replaceAll("d"," -.. ").replaceAll("n"," -. ").replaceAll("v"," ...- ").replaceAll("u"," ..- ").replaceAll("a"," .- ").replaceAll("h"," .... ").replaceAll("s"," ... ").replaceAll("i"," .. ").replaceAll("w"," .-- ").replaceAll("e"," . ").replaceAll("o"," --- ").replaceAll("m"," -- ").replaceAll("t"," - ").replaceAll("   ","/");
     

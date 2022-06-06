@@ -78,9 +78,9 @@
                 <div class="escolha">
                     <select id="ipt_bat">
                         <option value=0>-Selecione o traje-</option>
-                        <option value="101">Bat-Pattinson</option>
-                        <option value="102">Bat-Affleck</option>
-                        <option value="103">Bat-Bale</option>
+                        <option value=101>Bat-Pattinson</option>
+                        <option value=102>Bat-Affleck</option>
+                        <option value=103>Bat-Bale</option>
                     </select>
                 </div>
                 <div onclick="cadastrar()" class="botao2"><button>Registrar</button></div>
@@ -138,15 +138,21 @@ function cadastrar() {
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = csenha_input.value;
+        var battraje = Number(ipt_bat.value);
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || battraje == "" || battraje == 0) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             return false;
+        } else if (confirmacaoSenhaVar != senhaVar){
+            alert("Senhas diferentes"); 
+            return false; 
         }
         else {
               
         }
+
+        console.log(battraje)
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -159,7 +165,8 @@ function cadastrar() {
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                battrajeServer: battraje
             })
         }).then(function (resposta) {
 

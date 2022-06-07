@@ -31,10 +31,21 @@ function cadastrar(nome, email, senha, battraje) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+function obterDadosBattrajeModel() {
+   
+    var instrucaoDados = `
+    select count(fkBat) as QtdeBatPattinson from usuario where fkBat = 101 ;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoDados);
+    return database.executar(instrucaoDados);
+}
+
+    // bat count qtd de usuarios que pegaram essa info
 
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    obterDadosBattrajeModel
 };

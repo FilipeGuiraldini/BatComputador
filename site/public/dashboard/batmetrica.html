@@ -42,13 +42,13 @@
         <div class="batpattinson">
           <img class="imagem" src="../assets/imgs/bataffleck.jpg">
           <div class="textin">Bat-Affleck</div>
-          <div class="textin" id="div_qtd_pattinson">0</div>
+          <div class="textin" id="div_qtd_affleck">0</div>
           <div class="textin">Pessoas escolheram este traje</div>
         </div>
         <div class="batpattinson">
           <img class="imagem" src="../assets/imgs/batbale.jpeg">
           <div class="textin">Bat-Bale</div>
-          <div class="textin" id="div_qtd_pattinson">0</div>
+          <div class="textin" id="div_qtd_bale">0</div>
           <div class="textin">Pessoas escolheram este traje</div>
         </div>
       </div>
@@ -59,6 +59,20 @@
 </body>
 </html>
 <script>
-    
-   
+    var pattinson = 0;
+    fetch("/usuarios/pegarDados", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (resposta) {
+        if (resposta.status == 200) {
+            resposta.json().then(json => {
+               console.log(json[0].QtdeBatPattinson);
+              pattinson = json[0].QtdeBatPattinson;
+              div_qtd_pattinson.innerHTML = `${pattinson}`;
+            })
+        }
+    })
+            
 </script>

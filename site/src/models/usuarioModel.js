@@ -39,6 +39,14 @@ function obterDadosBattrajeModel() {
     console.log("Executando a instrução SQL: \n" + instrucaoDados);
     return database.executar(instrucaoDados);
 }
+function obterDadosBattrajeModel2() {
+   
+    var instrucaoDados2 = `
+    select count(fkBat) as QtdeBatAffleck from usuario where fkBat = 102 ;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoDados2);
+    return database.executar(instrucaoDados2);
+}
 
     // bat count qtd de usuarios que pegaram essa info
 
@@ -47,5 +55,6 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    obterDadosBattrajeModel
+    obterDadosBattrajeModel,
+    obterDadosBattrajeModel2
 };

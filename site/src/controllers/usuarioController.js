@@ -112,11 +112,28 @@ function obterDadosBattrajeController(req, res) {
             }
         );
 }
+function obterDadosBattrajeController2(req, res) {
+    usuarioModel.obterDadosBattrajeModel2()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
     testar,
-    obterDadosBattrajeController
+    obterDadosBattrajeController,
+    obterDadosBattrajeController2
 }

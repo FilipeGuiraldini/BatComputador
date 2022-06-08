@@ -74,5 +74,21 @@
             })
         }
     })
+
+    var affleck = 0;
+    fetch("/usuarios/pegarDados2", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (resposta) {
+        if (resposta.status == 200) {
+            resposta.json().then(json => {
+               console.log(json[0].QtdeBatAffleck);
+              affleck = json[0].QtdeBatAffleck;
+              div_qtd_affleck.innerHTML = `${affleck}`;
+            })
+        }
+    })
             
 </script>

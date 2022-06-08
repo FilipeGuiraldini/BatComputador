@@ -26,5 +26,7 @@ router.post("/pegarDados", function (req, res) {
 router.post("/pegarDados2", function (req, res) {
     usuarioController.obterDadosBattrajeController2(req, res);
 });
-
+router.post("/pegarDados3", function (req, res) {
+    usuarioController.obterDadosBattrajeController3(req, res);
+});
 module.exports = router;

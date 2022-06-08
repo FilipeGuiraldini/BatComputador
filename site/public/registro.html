@@ -139,6 +139,7 @@ function cadastrar() {
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = csenha_input.value;
         var battraje = Number(ipt_bat.value);
+        sessionStorage.setItem('battraje', battraje);
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || battraje == "" || battraje == 0) {
             cardErro.style.display = "block"
@@ -147,9 +148,13 @@ function cadastrar() {
         } else if (confirmacaoSenhaVar != senhaVar){
             alert("Senhas diferentes"); 
             return false; 
-        }
-        else {
+        }else {
               
+        }
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            return false;
         }
 
         console.log(battraje)

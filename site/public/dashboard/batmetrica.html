@@ -53,12 +53,21 @@
         </div>
       </div>
     </div>
-        
+    <div class="resto">
+      <div class="perfil">
+       <h2>Identidade Secreta (Perfil):</h2>
+        <p>Nome: <span id="nomeaqui"></span></p>
+        <p>Email: <span id="emailaqui"></span></p>
+        <p>Bat-traje: <span id="escolhaaqui"></span></p>
+      </div>
     </div>
-    <div class="resto"></div>
+    </div>
+    
 </body>
 </html>
 <script>
+  
+
     var pattinson = 0;
     fetch("/usuarios/pegarDados", {
         method: 'POST',
@@ -90,5 +99,32 @@
             })
         }
     })
-            
+
+    var bale = 0;
+    fetch("/usuarios/pegarDados3", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (resposta) {
+        if (resposta.status == 200) {
+            resposta.json().then(json => {
+               console.log(json[0].QtdeBatBale);
+              bale = json[0].QtdeBatBale;
+              div_qtd_bale.innerHTML = `${bale}`;
+            })
+        }
+    })
+         
+         nomeaqui.innerHTML = sessionStorage.NOME_USUARIO;
+         emailaqui.innerHTML = sessionStorage.EMAIL_USUARIO;
+         var escolha = sessionStorage.battraje; 
+         if (escolha == 101){
+          escolhaaqui.innerHTML = "Bat-Pattinson";
+         } else if (escolha == 102) {
+          escolhaaqui.innerHTML = "Bat-Affleck";
+         } else {
+          escolhaaqui.innerHTML = "Bat-Bale";
+         }
+
 </script>
